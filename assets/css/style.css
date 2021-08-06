@@ -1,0 +1,96 @@
+:root {
+  --color1: #1b1464;
+  --color2: rgb(25, 0, 255);
+  --color3: #020202;
+  --color4: rgb(250, 8, 8);
+  --color5: #003b13;
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("../img/yazılı-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color5);
+  transform: skewX(-15deg);
+}
+@media (max-width: 992px) {
+  .banner::before {
+    left: 0;
+    transform: skewX(0deg);
+  }
+}
+.banner .row {
+  padding: 2rem;
+}
+.banner .icerik {
+  z-index: 1;
+  color: white;
+}
+.banner .kutup-yildizi {
+  font-size: 17px;
+}
+.banner button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--color4);
+}
+.banner .card {
+  text-align: center;
+  padding-top: 1rem;
+  color: #003b13;
+}
+
+.banner .card .card-body {
+  color: var(--color4);
+}
+.banner .card i {
+  font-size: 2rem;
+}
+.banner .item a {
+  text-decoration: none;
+}
+.owl-carousel {
+  position: relative;
+  margin: 2rem 0 2rem 0;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  left: -2rem;
+  top: -3%;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  right: -2rem;
+  top: -3%;
+}
+.owl-nav .owl-next span {
+  font-size: 4rem;
+}
+.owl-nav .owl-prev span {
+  font-size: 4rem;
+}
+.owl-theme .owl-nav .owl-prev:hover {
+  background: none;
+  color: var(--color4);
+}
+.owl-theme .owl-nav .owl-next:hover {
+  background: none;
+  color: var(--color4);
+}
